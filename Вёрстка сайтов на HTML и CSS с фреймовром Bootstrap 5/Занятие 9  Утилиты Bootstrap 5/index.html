@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Обязательные метатеги -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Главная страница</title>
+    <style>
+      .text-background{
+        background: rgba(0,0,0, 0.5);
+        color: white;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">ProoFreeWork</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/slide1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="img/slide2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="img/slide3.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Предыдущий</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Следующий</span>
+      </button>
+    </div>
+
+    <div class="container my-5">
+      <h1 class="text-center">Хочу знать</h1>
+      <div class="row text-center" style="mt-3">
+        <div class="col-md-4" style="font-size: 40px;">
+          HTML
+        </div>
+        <div class="col-md-4" style="font-size: 40px;">
+          CSS
+        </div>
+        <div class="col-md-4" style="font-size: 40px;">
+          JS
+        </div>
+      </div>
+    </div>
+    
+    <div class="container-fluid py-5" style="background: url(img/block-bg.jpg); background-size: cover;">
+      <div class="col-sm-6 text-background p-3">
+        <h3>Классический текст Lorem Ipsum, используемый с XVI века</h3>
+        <p>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+      </div>
+    </div>
+    
+    <!-- Форма -->
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-sm-3">
+          <h3 class="text-center my-3">Контакты</h3>
+          <h5>Телефон:</h5>
+          <span>+79994567845</span>
+          <h5>Адрес:</h5>
+          <span>г. Москва</span>
+          <h5>Время работы:</h5>
+          <span>ПН-ПТ: с 8:30-18:30</span>
+        </div>
+        <div class="col-sm-9">
+          <h3 class="text-center my-3">Напишите нам</h3>
+          <form action="">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Имя">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Телефон">
+            </div>
+            <div class="mb-3">
+              <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Сообщение"></textarea>
+            </div>
+            <div class="mb-3">
+              <input type="submit" class="form-control btn btn-primary">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac0fa9a0f0fa3bca224a83b75438169ee856d9edb95bf6f71523da8c0abf6a59f&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+    
+    <footer class="py-5 bg-dark text-light">
+      <div class="container text-center py-3">
+        &copy; ProFreeWork
+      </div>
+    </footer>
+    <!-- Вариант 1: Bootstrap в связке с Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  </body>
+</html>
