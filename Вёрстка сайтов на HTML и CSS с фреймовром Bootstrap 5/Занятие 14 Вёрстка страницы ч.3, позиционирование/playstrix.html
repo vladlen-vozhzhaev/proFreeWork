@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Обязательные метатеги -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/750282b7c8.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Главная страница - PlayStrix.net</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Mali&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Oxanium&display=swap');
+      body{
+        background: url("/img/img04.jpg");
+      }
+      .my-navbar{
+        height: 120px;
+        background-color: rgba(0,0,0,.75);
+      }
+      .navbar-brand{
+        font-family: 'Mali', cursive;
+        font-size: 2.5rem;
+      }
+      .nav-link{
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+      .text-orange{
+        color: #FF6600;
+      }
+      .text-oxanium{
+        font-family: 'Oxanium', cursive;
+      }
+      .my-160{
+        margin-top: 160px;
+        margin-bottom: 160px;
+      }
+      .bg-dark-transparent{
+        color: white;
+        background-color: rgba(0,0,0,.5);
+      }
+      .useful-links{
+        background: url(/img/block-bg1.jpg);
+        padding: 1rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        color: white;
+        box-shadow: inset 0 0 5px black;
+        border-radius: 10px;
+      }
+      .btn-gradient-orange{
+        background: linear-gradient(150deg, rgba(255,102,0,1) 0%, rgba(255,138,0,1) 100%);
+        color: white;
+      }
+      .useful-links a{
+        color: white;
+        text-decoration: none;
+      }
+      .h-240{
+        height: 240px;
+      }
+      .image-block{
+        border: 10px solid rgb(0,0,0,0);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark my-navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand ms-4" href="#"><img src="/img/logo.png" width="80px" class="me-2" alt="">PlayStrix.net</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Правила</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Личный кабинет</a>
+            </li>
+          </ul>
+          <a href="#" class="me-5">
+            <i class="fab fa-vk fa-3x"></i>
+          </a>
+          <a href="#" class="me-5">
+            <i class="fab fa-discord fa-3x"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container my-160">
+      <div class="col-sm-7 bg-dark-transparent p-5 rounded">
+        <h2 class="text-orange">Сейчас играет 30 из 100</h2>
+        <p>IP сервера: playstrix.net</p>
+        <button class="btn btn-gradient-orange btn-lg">Скачать лаунчер</button>
+      </div>
+    </div>
+    
+    <div class="container">
+      <h1 class="text-white mb-5">Полезные ссылки</h1>
+      <div class="row useful-links">
+        <div class="col-sm-4">
+          <div class="row">
+            <div class="col-3">
+              <a href="#">
+                <i class="fab fa-discord fa-7x"></i>
+              </a>
+            </div>
+            <div class="col-9">
+              <a href="#">
+                <h4 class="ps-3 text-oxanium">Discord сервера</h4>
+                <p class="ps-3 text-orange">Приятное общение,<br> ламповая атмосфера</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="row">
+            <div class="col-3">
+              <a href="#">
+                <i class="fab fa-trello fa-7x"></i>
+              </a>
+            </div>
+            <div class="col-9">
+              <a href="#">
+                <h4 class="ps-3 text-oxanium">Trello сервера</h4>
+                <p class="ps-3 text-orange">Планы развития<br> сервера</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="row">
+            <div class="col-3">
+              <a href="#">
+                <i class="fas fa-book fa-7x"></i>
+              </a>
+            </div>
+            <div class="col-9">
+              <a href="#">
+                <h4 class="ps-3 text-oxanium">Правила сервера</h4>
+                <p class="ps-3 text-orange">Нужно изучить<br> перед началом игры</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-sm-4 image-block" >
+          <div class="h-240 rounded" style="background: url(/img/maxresdefault.jpg); background-size: cover;"></div>
+        </div>
+        <div class="col-sm-4 image-block">
+          <div class="h-240 rounded" style="background: url(/img/piglin-brute-translation.jpg); background-size: cover;"></div>
+        </div>
+        <div class="col-sm-4 image-block">
+          <div class="h-240 rounded" style="background: url(/img/Minecraft-3.jpg); background-size: cover;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Вариант 1: Bootstrap в связке с Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  </body>
+</html>
