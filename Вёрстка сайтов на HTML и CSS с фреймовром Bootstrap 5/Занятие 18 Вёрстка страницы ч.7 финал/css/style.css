@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Mali&family=Oxanium&display=swap');
+body{
+  background: url("/img/img04.jpg") no-repeat, linear-gradient(to right, #060503, #1C0E08);
+}
+.my-navbar{
+  height: 120px;
+  background-color: rgba(0,0,0,.75);
+}
+.navbar-brand{
+  font-family: 'Mali', cursive;
+  font-size: 2.5rem;
+}
+.nav-link{
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.text-orange{
+  color: #FF6600;
+  text-decoration: none;
+}
+.text-orange-yellow{
+  color: #FF8A00;
+}
+.text-oxanium{
+  font-family: 'Oxanium', cursive;
+}
+.text-lobster{
+  font-family: 'Lobster', cursive;
+}
+.text-mali{
+  font-famaly: 'Mali', cursive;
+}
+.my-160{
+  margin-top: 160px;
+  margin-bottom: 140px;
+}
+.bg-dark-transparent{
+  color: white;
+  background-color: rgba(0,0,0,.5);
+}
+.useful-links{
+  background: url(/img/block-bg1.jpg);
+  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: white;
+  box-shadow: inset 0 0 5px black;
+  border-radius: 10px;
+}
+.btn-gradient-orange{
+  background: linear-gradient(150deg, rgba(255,102,0,1) 0%, rgba(255,138,0,1) 100%);
+  color: white;
+}
+.useful-links a{
+  color: white;
+  text-decoration: none;
+}
+.h-240{
+  height: 240px;
+}
+.image-block{
+  border: 10px solid rgb(0,0,0,0);
+}
+.polygon{
+  position: relative;
+}
+.polygon:before{
+  content: "";
+  position:absolute;
+  width:33%;
+  height: 240px;
+  background: rgba(0,0,0,.5);
+}
+.polygon:after{
+  content: "";
+  position:absolute;
+  left: 33%;
+  border-top: 120px solid rgba(0,0,0,0);
+  border-right: 50px solid rgba(0,0,0,0);
+  border-bottom: 120px solid rgba(0,0,0,0);
+  border-left: 100px solid rgba(0,0,0,.5);
+}
+.polygon-text{
+  position: absolute;
+  font-size: 1.6rem;
+  top: 50%;
+  margin-top: -1.6rem;
+  left: 18%;
+  z-index:1;
+}
+.gallery-image{
+  height: 230px;
+  margin-bottom: 16px;
+}
+.strix{
+  width: 55%;
+  position: absolute;
+  top: -80%;
+  left: 10%;
+  z-index: -1;
+}
+@media (max-width: 1200px){
+  .strix{
+    top: -60%;
+  }
+}
+@media (max-width: 992px){
+  .strix{
+    display: none;
+  }
+}
+@media (max-width: 600px){
+  .navbar-brand img{
+    display: none;
+  }
+  .navbar-collapse{
+    background: rgba(0,0,0,.75);
+  }
+  h2.text-orange{
+    font-size: 1.3rem;
+  }
+  .my-60{
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .useful-links .col-9{
+    padding-left: 35px;
+  }
+  
+  .useful-links .row:after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    display: block;
+    margin: auto;
+    margin-top: 16px;
+    background: rgba(0,0,0,.5);
+    box-shadow: 0 0 3px rgba(0,0,0,.5);
+  }
+  .gallery-image{
+    height: 100px;
+  }
+  footer .text-end{
+    margin-top: 10px;
+    text-align: left!important;
+  }
+}
