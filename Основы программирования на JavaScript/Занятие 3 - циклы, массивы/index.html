@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let nums = [633,543,235,64,320,31];
+            let max = -Infinity;
+            for (let i = 0; i < nums.length; i++) {
+                if(max<nums[i] && nums[i]%2!=0){
+                    max = nums[i];
+                }
+            }
+
+            console.log(max);
+
+            /*let nums = [4,5,3,5,5,4,3,5];
+            console.log(nums.length);
+
+            let summ = 0;
+            for (let i = 0; i < nums.length; i++) {
+                summ += nums[i];
+            }
+            console.log(summ/nums.length);*/
+
+            /*let cars = ["bmw", "audi", "kia"];
+            console.log(cars);
+
+            for(let i=0; i<3; i++){
+                console.log(cars[i]);
+            }*/
+
+            /*let summ = +prompt("Введите сумму");
+            let p = 10;
+
+            for(let i=0; i<10; i++){
+                summ = summ+(summ*p/100);
+                console.log(summ);
+            }*/
+            /*let a = 3;
+
+            for(let i=0; i<10; i=i+1){
+                console.log(a);
+                a = a + 1;
+            }*/
+
+            /*do{
+                console.log(a);
+                a = a+1;
+            }while (a<6)*/
+
+            /*while (a<6){
+                console.log(a);
+                a=a+1;
+            }*/
+        </script>
+    </body>
+</html>
