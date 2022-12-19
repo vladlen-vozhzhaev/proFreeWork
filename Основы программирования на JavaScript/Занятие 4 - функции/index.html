@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+
+    <button onclick="g()">Сравнить числа</button>
+    <!--<button onclick="handlerClick('+')">+</button>
+    <button onclick="handlerClick('-')">-</button>
+    <button onclick="handlerClick('*')">*</button>
+    <button onclick="handlerClick('/')">/</button>-->
+    <script>
+        let num1 = document.getElementById("num1");
+        let num2 = document.getElementById("num2");
+
+        function g(){
+            let a = +num1.value;
+            let b = +num2.value;
+            if(a>b)
+                console.log(a + " больше, чем "+b);
+            else
+                console.log(a + " меньше, либо равно "+b);
+        }
+        /*function handlerClick(operator){
+            let a = +num1.value;
+            let b = +num2.value;
+
+            if(isNaN(a) || isNaN(b)) // Проверяем, что переменные являются числами
+                console.log("Некорректные данные");
+            else
+                if(operator == '+') console.log(a+b);
+                else if(operator == '-') console.log(a-b)
+                else if(operator == '*') console.log(a*b);
+                else if(operator == '/')
+                    if(b==0) console.log("На ноль делить нельзя!");
+                    else console.log(a/b);
+        }*/
+
+        /*function f(x){
+            return x*x;
+        }
+
+        console.log(f(3));*/
+
+        /*function sayHello(){
+            console.log("Hello world");
+        }
+
+        sayHello();
+        sayHello();
+        sayHello();*/
+    </script>
+</body>
+</html>
