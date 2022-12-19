@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Нажми меня</button>
+    <script>
+        let btn = document.getElementById('btn');
+
+        btn.onclick = function (event){
+            console.log(event);
+        }
+
+        /*let i = 1;
+        setInterval(function (){
+            console.log("tick"+i++);
+        }, 1000);*/
+
+       /* let i = 1;
+        function tick(){
+            console.log("tick"+i++);
+        }
+
+        setInterval(tick, 1000);*/
+
+
+        /*function ask(text, yes, no){
+            let answer = confirm(text);
+            if(answer){
+                yes();
+            }else{
+                no();
+            }
+        }
+
+        ask("2+2=4?", function(){console.log("Правильно")}, function(){console.log("Не правильно!");});
+
+        function correct(){
+            console.log("Правильно!");
+        }
+
+        function incorrect(){
+            console.log("Не правильно!");
+        }
+
+        ask("2+2=4?", correct, incorrect);*/
+    </script>
+</body>
+</html>
