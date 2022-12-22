@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plane</title>
+    <style>
+        img{
+            width: 200px;
+            transform: scale(-1,1);
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <img src="img/plane.png" id="plane" alt="">
+    <script>
+        let plane = document.getElementById('plane');
+        let i = 0;
+        let moveToRight = true;
+        setInterval(function(){
+            if(i>window.innerWidth-200){
+                plane.style.transform = "scale(1,1)";
+                moveToRight=false;
+            }else if(i==0){
+                plane.style.transform = "scale(-1,1)";
+                moveToRight=true;
+            }
+
+            if(moveToRight){
+                plane.style.left = (++i)+"px";
+            }else{
+                plane.style.left = (--i)+"px";
+            }
+        }, 10)
+    </script>
+</body>
+</html>

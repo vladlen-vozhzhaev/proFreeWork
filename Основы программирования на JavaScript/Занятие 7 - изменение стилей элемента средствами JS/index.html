@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            #block{
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="block"></div>
+
+        <button onclick="handlerClick()">Нажми меня</button>
+        <script>
+            let block = document.getElementById("block");
+            let colors = ["red", "lime", "blue", "yellow"];
+            let index = 0;
+            function handlerClick(){
+                if(index<colors.length)
+                    block.style.background = colors[index++];
+                else{
+                    index = 0;
+                    handlerClick();
+                }
+            }
+
+            /*let user = {
+                name: "Ivan",
+                lastname: "Ivanov",
+                age: 32,
+                sayHi: function(){
+                    console.log("Hello world");
+                }
+            }*/
+        </script>
+    </body>
+</html>
