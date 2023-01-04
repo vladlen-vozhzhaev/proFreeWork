@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Balls</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="ball"></div>
+    <script>
+        let ball = document.getElementById("ball");
+        ball.onmousedown = function (event){
+            console.log(event.clientX+":"+event.clientY);
+            ball.style.top = event.clientY-50+"px";
+            ball.style.left = event.clientX-50+"px";
+
+            window.onmousemove = function (e){
+                ball.style.top = e.clientY-50+"px";
+                ball.style.left = e.clientX-50+"px";
+            }
+
+            ball.onmouseup = function (){
+                window.onmousemove = function (){return false;}
+            }
+        }
+    </script>
+</body>
+</html>
