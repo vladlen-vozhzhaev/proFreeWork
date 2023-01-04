@@ -48,13 +48,14 @@
 <div id="yellowBox" data-color="yellow"></div>
 <div id="ball"></div>
 <script>
-    let colors = ["red", "lime", "blue", "yellow"];
-    let redBox = document.getElementById("redBox");
+    const colors = ["red", "lime", "blue", "yellow"];
+    const blocks = document.querySelectorAll("[id$='Box']");
+    /*let redBox = document.getElementById("redBox");
     let limeBox = document.getElementById("limeBox");
     let blueBox = document.getElementById("blueBox");
-    let yellowBox = document.getElementById("yellowBox");
+    let yellowBox = document.getElementById("yellowBox");*/
     for (let i = 0; i < 7; i++) {
-        let ball = document.createElement("div");
+        const ball = document.createElement("div");
         ball.classList.add("ball");
         ball.style.top = getIntRandom(200, window.innerHeight-300)+"px";
         ball.style.left = getIntRandom(200, window.innerWidth-300)+"px";
@@ -70,7 +71,18 @@
             }
             ball.onmouseup = function (e) {
                 window.onmousemove = function () {return false;}
-                if(redBox.getBoundingClientRect().top<e.clientY && redBox.getBoundingClientRect().bottom>e.clientY
+                let coincidence = true;
+                for (let i = 0; i < blocks.length; i++) {
+                    if(blocks[i].getBoundingClientRect().top<e.clientY && blocks[i].getBoundingClientRect().bottom>e.clientY
+                        && blocks[i].getBoundingClientRect().left<e.clientX && blocks[i].getBoundingClientRect().right>e.clientX
+                        && blocks[i].dataset.color == ball.style.background){
+                        ball.hidden = true;
+                        coincidence = false;
+                        break;
+                    }
+                }
+                if(coincidence) alert("Цвет не совпал");
+                /*if(redBox.getBoundingClientRect().top<e.clientY && redBox.getBoundingClientRect().bottom>e.clientY
                     && redBox.getBoundingClientRect().left<e.clientX && redBox.getBoundingClientRect().right>e.clientX
                     && redBox.dataset.color == ball.style.background){
                     console.log("Цвет совпал");
@@ -88,7 +100,7 @@
                     console.log("Цвет совпал");
                 }else{
                     console.log("Цвет не совпал");
-                }
+                }*/
             }
         }
     }
@@ -102,10 +114,12 @@
         console.log(event.clientX+":"+event.clientY);
         ball.style.top = event.clientY-50+"px";
         ball.style.left = event.clientX-50+"px";
+
         window.onmousemove = function (e){
             ball.style.top = e.clientY-50+"px";
             ball.style.left = e.clientX-50+"px";
         }
+
         ball.onmouseup = function (){
             window.onmousemove = function (){return false;}
         }
@@ -113,3 +127,4 @@
 </script>
 </body>
 </html>
+
