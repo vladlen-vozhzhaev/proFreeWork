@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Balls</title>
+    <style>
+        .ball{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+        }
+        #redBox, #limeBox, #blueBox, #yellowBox{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+        #redBox{
+            background: red;
+            left: 0;
+            top: 0;
+        }
+        #limeBox{
+            background: lime;
+            right: 0;
+            top: 0;
+        }
+        #blueBox{
+            background: blue;
+            left: 0;
+            bottom: 0;
+        }
+        #yellowBox{
+            background: yellow;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="redBox"></div>
+    <div id="limeBox"></div>
+    <div id="blueBox"></div>
+    <div id="yellowBox"></div>
+    <div id="ball"></div>
+    <script>
+        let colors = ["red", "lime", "blue", "yellow"];
+        for (let i = 0; i < 7; i++) {
+            let ball = document.createElement("div");
+            ball.classList.add("ball");
+            ball.style.top = getIntRandom(200, window.innerHeight-300)+"px";
+            ball.style.left = getIntRandom(200, window.innerWidth-300)+"px";
+            ball.style.background = colors[getIntRandom(0, colors.length)];
+        }
+
+
+        function getIntRandom(min, max){
+            return Math.floor(Math.random()*(max-min)+min);
+        }
+        /*let ball = document.getElementById("ball");
+        ball.onmousedown = function (event){
+            console.log(event.clientX+":"+event.clientY);
+            ball.style.top = event.clientY-50+"px";
+            ball.style.left = event.clientX-50+"px";
+
+            window.onmousemove = function (e){
+                ball.style.top = e.clientY-50+"px";
+                ball.style.left = e.clientX-50+"px";
+            }
+
+            ball.onmouseup = function (){
+                window.onmousemove = function (){return false;}
+            }
+        }*/
+    </script>
+</body>
+</html>
+
