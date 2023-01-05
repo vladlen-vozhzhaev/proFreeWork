@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <h2 id="userNameH2"></h2>
+        Как вас зовут: <input type="text" id="userNameInput"> <button onclick="saveName2()">Запомнить имя</button>
+        <script>
+            let name;
+            let userNameInput = document.getElementById("userNameInput");
+            let userNameH2 = document.getElementById("userNameH2");
+            //userNameH2.innerText = getCookie("username");
+            userNameH2.innerText = localStorage.getItem("username");
+
+            function saveName2(){
+                name = userNameInput.value;
+                localStorage.setItem("username", name);
+                userNameH2.innerText = name;
+            }
+
+            function saveName(){
+                name = userNameInput.value;
+                document.cookie = "username="+name;
+                userNameH2.innerText = name;
+            }
+
+            function getCookie(name) {
+                let matches = document.cookie.match(new RegExp(
+                    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+                ));
+                return matches ? decodeURIComponent(matches[1]) : undefined;
+            }
+        </script>
+    </body>
+</html>
