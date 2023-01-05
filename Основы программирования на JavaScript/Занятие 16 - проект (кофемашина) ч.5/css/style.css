@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Press+Start+2P&display=swap');
+body{
+    background: url("../img/coffee_background.webp");
+}
+.container.my-5{
+    background: rgba(255, 228, 181, .5);
+}
+.coffee-btn-group{
+    background: indianred;
+    height: 75px;
+    border-radius: 37.5px 0 0 37.5px;
+}
+.coffee-btn{
+    width: 75px;
+    height: 75px;
+    background: firebrick;
+    border: 2px solid salmon;
+    box-shadow: 0 0 10px black;
+    display: inline-block;
+}
+.coffee-btn:hover{
+    cursor: pointer;
+    background: crimson;
+}
+.coffee-btn:active{
+    background: darkred;
+    box-shadow: inset 0 0 15px black;
+}
+.coffee-btn-group>span{
+    font-size: 2rem;
+    position: relative;
+    top: -1.6rem;
+    color: white;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+}
+#display{
+    width: 100%;
+    height: 180px;
+    background: navy;
+    color: white;
+    border: 3px solid black;
+    font-family: 'Press Start 2P', cursive;
+}
+#changeBox{
+    width: 100%;
+    height: 200px;
+    background: lightsalmon;
+    border: 2px solid coral;
+    position: relative;
+}
+img[src$="rub.png"]{
+    width: 60px;
+    position: absolute;
+}
+img[src$="rub.jpg"]:hover, img[src$="rub.png"]:hover{
+    cursor: pointer;
+    filter: contrast(120%);
+}
