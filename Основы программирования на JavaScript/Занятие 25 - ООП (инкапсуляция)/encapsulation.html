@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Инкапсуляция</title>
+</head>
+<body>
+    <script>
+        // Здоровье персонажа не может превышать 100ед.
+        class Person{
+            #hp = 100;
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            get hp(){
+                return this.#hp;
+            }
+            set hp(value){
+                if(this.#hp+value>=100) this.#hp = 100;
+                else this.#hp += value;
+            }
+        }
+
+        let person = new Person("Ivan", 43);
+        let medKit = 50; // Аптечка 50 ед.
+        console.log(person.hp);
+        person.hp = -30;
+        console.log(person.hp);
+        person.hp = medKit;
+        console.log(person.hp);
+    </script>
+</body>
+</html>
