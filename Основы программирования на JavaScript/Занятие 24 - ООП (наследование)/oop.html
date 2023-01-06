@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="personInfo"></div>
+    <script>
+        let personInfo = document.getElementById("personInfo");
+        class Person{
+            constructor(name, lastname, age, mother, father) {
+                this.name = name;
+                this.lastname = lastname;
+                this.age = age;
+                this.mother = mother;
+                this.father = father;
+            }
+            sayHi(){
+                console.log("hello");
+            }
+            info(){ // Если есть родитель, то вывести его имя, если нет, то не выводить
+                let info = `
+                    Меня зовут: ${this.name}
+                `;
+                if(this.mother != undefined){
+                    info += `Мою маму зовут ${this.mother.name}\n`;
+                    if (this.mother.mother != undefined){
+                        info += `Мою бабушку по маминой линии зовут ${this.mother.mother.name}\n`;
+                    }
+                    if(this.father.filter != undefined){
+                        info += `Моего дедушку по маминой линии зовут ${this.father.father.name}\n`;
+                    }
+                }
+                if(this.father != undefined){
+                    info += `Моего папу зовут ${this.father.name}\n`;
+                    if (this.mother.mother != undefined){
+                        info += `Мою бабушку по папиной линии зовут ${this.mother.mother.name}\n`;
+                    }
+                    if(this.father.filter != undefined){
+                        info += `Моего дедушку по папиной линии зовут ${this.father.father.name}\n`;
+                    }
+                }
+                personInfo.innerText =  info;
+            }
+        }
+        let person7 = new Person("Eva", "Ivanov", 60, undefined, undefined);
+        let person6 = new Person("Vasya", "Petrov", 62, undefined, undefined);
+        let person5 = new Person("Igor", "Ivanov", 64, undefined, undefined);
+        let person4 = new Person("Katya", "Petrova", 60, undefined, undefined);
+        let person3 = new Person("Oleg", "Ivanov", 36, person7, person5);
+        let person2 = new Person("Olga", "Ivanova", 35, person4, person6);
+        let person = new Person("Ivan", "Ivanov", 10, person2, person3);
+
+        /*//Функция конструктор
+        function Person(name, lastname, age){
+            this.name = name;
+            this.lastname = lastname;
+            this.age = age;
+            this.sayHi = ()=>{
+                console.log("hello");
+            }
+        }
+
+        let person = new Person("Ivan", "Ivanov", 23);
+        let person2 = new Person("Vasya", "Pupkin", 45);*/
+
+
+        /*let user = {
+            name: "Ivan",
+            lastname: "Ivanov",
+            age: 23,
+            sayHi: ()=>{
+                console.log("hello");
+            }
+        }
+        let user2 = {
+            name: "Vasya",
+            lastname: "Pupkin",
+            age: 45,
+            sayHi: ()=>{
+                console.log("hello");
+            }
+        }*/
+    </script>
+</body>
+</html>

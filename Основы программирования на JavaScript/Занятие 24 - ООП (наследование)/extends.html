@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Наследование</title>
+    </head>
+    <body>
+        <script>
+            class Animal{
+                constructor(nickname, breed, age) {
+                    this.nickname = nickname;
+                    this.breed = breed;
+                    this.age = age;
+                }
+                run(){
+                    console.log(`${this.nickname} бежит`);
+                }
+                eat(){
+                    console.log(`Ням ням`);
+                }
+            }
+
+            class Cat extends Animal{
+                eat(){
+                    console.log(`Кот ${this.nickname} кушает`);
+                }
+            }
+            class Horse extends Animal{
+
+            }
+            class Pegasus extends Horse{
+                fly(){
+                    console.log(`Пегас ${this.nickname} бежит`);
+                }
+            }
+        </script>
+    </body>
+</html>
